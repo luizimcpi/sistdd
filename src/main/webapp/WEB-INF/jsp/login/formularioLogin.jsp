@@ -10,10 +10,12 @@
 <body>
 	<div class="container">
 		<header class="row">
-        	<h1>Login</h1>
    		</header>
 		<div class="row">
 			<div role="main" class="col-md-6 col-md-push-3">
+				  <center>
+				  	<h1>Login-SisTdd</h1>
+				  </center>
 			      <form class="form-signin" action="<c:url value='/login/autentica' />"  method="post">
 			        <label for="inputNome" class="sr-only">Usuário</label>
 			        <input type="text" id="inputUsuario" class="form-control" name="usuario.nome" placeholder="Login" required autofocus>

@@ -52,9 +52,12 @@
 			</table>
 		</div>
 		<footer class="row">
-       		<c:if test="${mensagem != '' && !empty mensagem}">
-			<div class="alert alert-success" role="alert"><c:out value="${mensagem}"/></div>
-		</c:if>
+	       	<c:if test="${mensagem != '' && !empty mensagem}">
+				<div class="alert alert-success" role="alert"><c:out value="${mensagem}"/></div>
+			</c:if>
+	       	<c:if test="${erro != '' && !empty erro}">
+				<div class="alert alert-danger" role="alert"><strong><c:out value="${erro}"/></strong></div>
+			</c:if>
    		</footer>
 	</div>
 </body>

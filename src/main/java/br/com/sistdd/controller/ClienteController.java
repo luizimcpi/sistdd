@@ -1,5 +1,8 @@
 package br.com.sistdd.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import br.com.caelum.brutauth.auth.annotations.CustomBrutauthRules;
@@ -14,8 +17,6 @@ import br.com.sistdd.dao.ClienteDao;
 import br.com.sistdd.model.Cliente;
 import br.com.sistdd.rules.LogadoRule;
 import br.com.sistdd.sessao.UsuarioLogado;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 @CustomBrutauthRules(LogadoRule.class)
@@ -63,9 +64,17 @@ public class ClienteController {
 	
 	@Delete("/cliente/{cliente.id}")
 	public void remove(Cliente cliente) {
-		clienteDao.excluir(cliente);
-		result.include("mensagem", "Cliente Removido com Sucesso!");
-		result.redirectTo(this).listaCliente();
+		try{
+			clienteDao.excluir(cliente);
+			result.include("mensagem", "Cliente Removido com Sucesso!");
+			result.redirectTo(this).listaCliente();
+		}catch (Exception e) {
+			result.include("mensagem", "");
+			result.include("erro", "Erro! - Cliente não pode ser Excluído!");
+			result.redirectTo(this).listaCliente();
+		}
+		
+		
 	}
 	
 	@Get("/cliente/verCliente/{cliente.id}")

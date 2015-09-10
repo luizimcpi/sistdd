@@ -42,7 +42,7 @@ public class ClienteDao{
 		em.merge(cliente);
 	}
 	
-	public void excluir(Cliente cliente) {
+	public void excluir(Cliente cliente){
 		Cliente clienteRemocao = this.buscarPorId(cliente.getId());
 		em.remove(clienteRemocao);
 	}	
