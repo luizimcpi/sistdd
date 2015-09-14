@@ -38,6 +38,7 @@
             </label>
 
             <input type="submit" value="Login" class="ls-btn-primary ls-btn-block ls-btn-lg">
+            <a class="ls-btn-default ls-btn-block ls-btn-lg ls-ico-users" href="${linkTo[UsuarioController].formUsuario()}" >Cadastro</a>
           </fieldset>
         </form>
       </div>
@@ -45,6 +46,9 @@
 		<c:forEach items="${errors}" var="erro" >
 			<div class="ls-alert-danger"><strong><c:out value="${erro.message}"/></strong></div>
 		</c:forEach>
+		<c:if test="${mensagem != '' && !empty mensagem}">
+			<div class="ls-alert-success"><c:out value="${mensagem}"/></div>
+		</c:if>
   </div>
 </div>
 

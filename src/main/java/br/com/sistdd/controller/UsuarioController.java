@@ -32,9 +32,8 @@ public class UsuarioController {
 	@Post
 	public void adicionaUsuario(Usuario usuario){
 		usuarioDao.adicionaUsuario(usuario);
-		result.include("mensagem", "Usuario Adicionado com Sucesso!");
-		result.redirectTo(this).listaUsuario();
-		
+		result.include("mensagem", "Usuário Adicionado com Sucesso!");
+		result.redirectTo(LoginController.class).formularioLogin();
 	}
 	
 	@Get("/usuario/editarUsuario/{usuario.id}") 

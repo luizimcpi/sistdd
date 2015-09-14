@@ -1,30 +1,95 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css">
-<title>produto - ver.jsp</title>
-</head>
-<body>
-<div class="container">
-	<header class="row">
-		<a class="btn btn-success" href="${linkTo[ProdutoController].lista()}" role="button">Voltar</a>
-	</header>
-	<div class="row">
-		<div class="col-md-12">
-		  <div class="form-group">
-		    <label for="inputNome">Nome:</label>
-		   	<c:out value="${produto.nome}"/>
-		  </div>
-		  <div class="form-group">
-		    <label for="inputValor">Valor:</label>
-		   	<c:out value="${produto.valor}"/>
-		  </div>
-		</div>
-	</div>
-</div>
-<script src="<%=request.getContextPath()%>/js/jquery-2.1.4.min.js"></script>
-</body>
+
+<!DOCTYPE html>
+<html class="ls-theme-green">
+  <head>
+    <title>SisTDD - ver.jsp</title>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Insira aqui a descrição da página.">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/locastyle.css">
+    <link rel="icon" sizes="192x192" href="<%=request.getContextPath()%>/images/ico-boilerplate.png">
+    <link rel="apple-touch-icon" href="<%=request.getContextPath()%>/images/ico-boilerplate.png">
+  </head>
+  <body>
+    <div class="ls-topbar">
+
+      <!-- Notification bar -->
+      <div class="ls-notification-topbar">
+        <!-- User details -->
+        <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+          <a href="#" class="ls-ico-user">
+          	Usuário Logado:	${usuarioLogado.usuario.nome}
+          </a>
+          <nav class="ls-dropdown-nav ls-user-menu">
+            <ul>
+              <li><a href="${linkTo[UsuarioController].logout()}">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <span class="ls-show-sidebar ls-ico-menu"></span>
+
+      <!-- Nome do produto/marca -->
+      <h1 class="ls-brand-name"><a class="ls-ico-screen" href="#">SisTDD</a></h1>
+    </div>
+
+    <main class="ls-main ">
+      <div class="container-fluid">
+        <h1 class="ls-title-intro ls-ico-home">Consulta Produto</h1>
+          <section class="container">
+                <div class="container">
+               	  <form class="ls-form row" name="produtoForm">
+		              <fieldset>
+		                <label class="ls-label col-md-4">
+		                  <b class="ls-label-text">Nome do Produto:</b>
+		                  <c:out value="${produto.nome}"/>
+		                </label>
+		                <label class="ls-label col-md-4">
+		                  <b class="ls-label-text">Valor do Produto:</b>
+		                 R$:&nbsp;<c:out value="${produto.valor}"/>
+		                </label>
+		              </fieldset>
+		              <div class="ls-actions-btn">
+		                   <a class="ls-btn-danger" href="${linkTo[ProdutoController].lista()}" >Voltar</a>
+		              </div>
+	              </form>
+                </div> <!-- /container -->
+            </section>
+      </div>
+    </main>
+
+    <aside class="ls-sidebar">
+      <!-- Defails of user account -->
+      <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+        <a href="#" class="ls-ico-user">
+        	Usuário Logado:	${usuarioLogado.usuario.nome}
+        </a>
+        <nav class="ls-dropdown-nav ls-user-menu">
+            <ul>
+              <li><a href="${linkTo[UsuarioController].logout()}">Logout</a></li>
+            </ul>
+          </nav>
+      </div>
+
+      <nav class="ls-menu">
+        <ul>
+          <li><a href="${linkTo[ClienteController].listaCliente()}" class="ls-ico-users">Clientes</a></li>
+        </ul>
+        <ul>
+      	  <li><a href="${linkTo[ProdutoController].lista()}" class="ls-ico-cart">Produtos</a></li>
+        </ul>
+        <ul>
+      	  <li><a href="${linkTo[PedidoController].listaPedido()}" class="ls-ico-docs">Pedidos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <script src="<%=request.getContextPath()%>/js/jquery-2.1.4.min.js"></script>
+	<script src="<%=request.getContextPath()%>/js/locastyle.js"></script>
+  </body>
 </html>

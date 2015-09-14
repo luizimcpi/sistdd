@@ -40,19 +40,13 @@
 
     <main class="ls-main ">
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-home">Bem-Vindo!</h1>
+        <h1 class="ls-title-intro ls-ico-home">Pedidos</h1>
           <section class="container">
                 <div class="container">
                         <div class="row">
-                          <div class="col-md-12">
-                            <h3>Pedidos</h3>
-                          </div>
-                        </div>
-                        </br>
-                        <div class="row">
                            <div class="col-md-11">
                             <p>
-                              <a href="${linkTo[PedidoController].formPedido()}" class="ls-btn-primary ls-ico-user">Cadastrar</a>
+                              <a href="${linkTo[PedidoController].formPedido()}" class="ls-btn-primary ls-ico-docs">Cadastrar</a>
                             </p>
                             <table class="ls-table ls-table-striped ls-sm-space">
                               <thead>
@@ -70,10 +64,10 @@
 			                             <td>${pedido.id}</td>
 			                             <td>${pedido.cliente.nome}</td>
 			                             <td>R$: ${pedido.valorTotal}</td>
-			                             <td><a class="ls-btn-primary" href="${linkTo[PedidoController].verPedido()}${pedido.id}" >Consultar</a></td>
+			                             <td><a class="ls-btn-primary ls-ico-search" href="${linkTo[PedidoController].verPedido()}${pedido.id}" >Consultar</a></td>
 			                             <td>
 			                             	<form action="<c:url value="/pedido/${pedido.id}"/>" method="POST">
-									         <button class="ls-btn-danger" onclick="return confirm('Deseja realmente remover esse pedido?');" name="_method" 
+									         <button class="ls-btn-danger ls-ico-close" onclick="return confirm('Deseja realmente remover esse pedido?');" name="_method" 
 									           value="DELETE">
 									           Remover
 									         </button>
@@ -111,7 +105,7 @@
           <li><a href="${linkTo[ClienteController].listaCliente()}" class="ls-ico-users">Clientes</a></li>
         </ul>
         <ul>
-      	  <li><a href="${linkTo[ProdutoController].lista()}" class="ls-ico-origins">Produtos</a></li>
+      	  <li><a href="${linkTo[ProdutoController].lista()}" class="ls-ico-cart">Produtos</a></li>
         </ul>
       </nav>
     </aside>

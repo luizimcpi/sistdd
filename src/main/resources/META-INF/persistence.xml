@@ -24,11 +24,11 @@
 		<properties>
 		 <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sistdd"/>
-<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.12.109.130:3306/tdd"/> -->
+<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.5.104.2:3306/sistdd"/> -->
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="root" />
-<!-- 			<property name="javax.persistence.jdbc.user" value="adminvs2kmQT" /> -->
-<!-- 			<property name="javax.persistence.jdbc.password" value="CQnRlR4hwstB" /> -->
+<!-- 			<property name="javax.persistence.jdbc.user" value="adminxcwCGQM" /> -->
+<!-- 			<property name="javax.persistence.jdbc.password" value="5Zmb6A5e1x6Y" /> -->
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
