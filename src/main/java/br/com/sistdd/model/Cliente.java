@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity 
 public class Cliente implements Serializable {
@@ -16,6 +18,9 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String telefone;
 	private String endereco;
+	
+	@OneToOne
+	private Pedido pedido;
 	
 	public String getNome() {
 		return nome;
@@ -40,5 +45,11 @@ public class Cliente implements Serializable {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public Pedido getPedido() {
+		return pedido;
+	}
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 }

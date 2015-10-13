@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Produto implements Serializable {
 
+	private static final long serialVersionUID =  1L;
 	@GeneratedValue @Id
 	private Long id;
 
@@ -21,13 +22,6 @@ public class Produto implements Serializable {
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
-	public Produto() {
-	}
-	
-	public Produto(String nome, Double valor, Integer quantidade) {
-		this.nome = nome;
-		this.valor = valor;
-	}
 
 	public Long getId() {
 		return id;
