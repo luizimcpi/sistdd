@@ -12,9 +12,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import br.com.sistdd.controller.ClienteController;
-//import br.com.sistdd.dao.ClienteDao;
-//import static org.mockito.Mockito.*;
+import com.lhsedev.sistdd.controller.ClienteController;
+import com.lhsedev.sistdd.model.Cliente;
 
 /**
  *

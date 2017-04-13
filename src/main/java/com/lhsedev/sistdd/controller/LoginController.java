@@ -1,6 +1,10 @@
-package br.com.sistdd.controller;
+package com.lhsedev.sistdd.controller;
 
 import javax.inject.Inject;
+
+import com.lhsedev.sistdd.dao.UsuarioDao;
+import com.lhsedev.sistdd.model.Usuario;
+import com.lhsedev.sistdd.sessao.UsuarioLogado;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
@@ -8,9 +12,6 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.validator.I18nMessage;
 import br.com.caelum.vraptor.validator.Validator;
-import br.com.sistdd.dao.UsuarioDao;
-import br.com.sistdd.model.Usuario;
-import br.com.sistdd.sessao.UsuarioLogado;
 
 @Controller
 public class LoginController {

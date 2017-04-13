@@ -13,7 +13,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.sistdd.controller.PedidoController;
+import com.lhsedev.sistdd.controller.PedidoController;
+import com.lhsedev.sistdd.model.Produto;
 
 public class PedidoTest {
 	List<Produto> produtosAdd = new ArrayList<Produto>();

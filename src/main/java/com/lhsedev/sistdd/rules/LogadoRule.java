@@ -1,10 +1,11 @@
-package br.com.sistdd.rules;
+package com.lhsedev.sistdd.rules;
 
 import javax.inject.Inject;
 
+import com.lhsedev.sistdd.sessao.UsuarioLogado;
+
 import br.com.caelum.brutauth.auth.annotations.HandledBy;
 import br.com.caelum.brutauth.auth.rules.CustomBrutauthRule;
-import br.com.sistdd.sessao.UsuarioLogado;
 
 @HandledBy(LogadoHandler.class)
 public class LogadoRule implements CustomBrutauthRule{

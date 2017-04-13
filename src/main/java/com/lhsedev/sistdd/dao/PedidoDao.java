@@ -1,4 +1,4 @@
-package br.com.sistdd.dao;
+package com.lhsedev.sistdd.dao;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import javax.mail.Address;
 import javax.persistence.EntityManager;
 
-import br.com.sistdd.model.Cliente;
-import br.com.sistdd.model.Pedido;
+import com.lhsedev.sistdd.model.Cliente;
+import com.lhsedev.sistdd.model.Pedido;
 
 @RequestScoped
 public class PedidoDao {

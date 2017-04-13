@@ -1,9 +1,17 @@
-package br.com.sistdd.controller;
+package com.lhsedev.sistdd.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import com.lhsedev.sistdd.dao.ClienteDao;
+import com.lhsedev.sistdd.dao.PedidoDao;
+import com.lhsedev.sistdd.dao.ProdutoDao;
+import com.lhsedev.sistdd.model.Cliente;
+import com.lhsedev.sistdd.model.Pedido;
+import com.lhsedev.sistdd.model.Produto;
+import com.lhsedev.sistdd.rules.LogadoRule;
 
 import br.com.caelum.brutauth.auth.annotations.CustomBrutauthRules;
 import br.com.caelum.vraptor.Controller;
@@ -12,13 +20,6 @@ import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Result;
-import br.com.sistdd.dao.ClienteDao;
-import br.com.sistdd.dao.PedidoDao;
-import br.com.sistdd.dao.ProdutoDao;
-import br.com.sistdd.model.Cliente;
-import br.com.sistdd.model.Pedido;
-import br.com.sistdd.model.Produto;
-import br.com.sistdd.rules.LogadoRule;
 
 @Controller
 @CustomBrutauthRules(LogadoRule.class)

@@ -1,4 +1,4 @@
-package br.com.sistdd.model;
+package com.lhsedev.sistdd.model;
 
 import java.io.Serializable;
 

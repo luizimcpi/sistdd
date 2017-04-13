@@ -1,11 +1,12 @@
-package br.com.sistdd.rules;
+package com.lhsedev.sistdd.rules;
 
 import javax.inject.Inject;
+
+import com.lhsedev.sistdd.controller.LoginController;
 
 import br.com.caelum.brutauth.auth.handlers.RuleHandler;
 import br.com.caelum.vraptor.validator.I18nMessage;
 import br.com.caelum.vraptor.validator.Validator;
-import br.com.sistdd.controller.LoginController;
 
 public class LogadoHandler implements RuleHandler{
 

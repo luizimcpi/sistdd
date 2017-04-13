@@ -1,11 +1,11 @@
-package br.com.sistdd.sessao;
+package com.lhsedev.sistdd.sessao;
 
 import java.io.Serializable;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
-import br.com.sistdd.model.Usuario;
+import com.lhsedev.sistdd.model.Usuario;
 
 @SessionScoped
 @Named("usuarioLogado")

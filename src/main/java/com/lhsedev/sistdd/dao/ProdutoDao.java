@@ -1,4 +1,4 @@
-package br.com.sistdd.dao;
+package com.lhsedev.sistdd.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.com.sistdd.model.Produto;
+import com.lhsedev.sistdd.model.Produto;
 
 @RequestScoped
 public class ProdutoDao {
